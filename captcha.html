@@ -246,19 +246,21 @@
         <div class="captcha-card" style="margin-bottom: 30px;">
             <div class="captcha-title">🎯 Sənin Doğum Tarixin</div>
 
-            <div class="numbers_part">
-                <div class="part_description">Gün</div>
-                <input v-model="realDay" maxlength="2" class="number_input" style="width:60px;">
-            </div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <div class="numbers_part" style="flex-direction: column;">
+                    <div class="part_description">Gün</div>
+                    <input v-model="realDay" maxlength="2" class="number_input" style="width:60px;">
+                </div>
 
-            <div class="numbers_part">
-                <div class="part_description">Ay</div>
-                <input v-model="realMonth" maxlength="2" class="number_input" style="width:60px;">
-            </div>
+                <div class="numbers_part" style="flex-direction: column;">
+                    <div class="part_description">Ay</div>
+                    <input v-model="realMonth" maxlength="2" class="number_input" style="width:60px;">
+                </div>
 
-            <div class="numbers_part">
-                <div class="part_description">İl</div>
-                <input v-model="realYear" maxlength="4" class="number_input" style="width:80px;">
+                <div class="numbers_part" style="flex-direction: column;">
+                    <div class="part_description">İl</div>
+                    <input v-model="realYear" maxlength="4" class="number_input" style="width:80px;">
+                </div>
             </div>
         </div>
 
@@ -405,32 +407,6 @@
             </div>
         </div>
 
-        <!-- Müqayisə bölməsi -->
-        <div class="captcha-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-            <h2 style="text-align: center; margin-bottom: 20px;">📊 Müqayisə</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-                    <h3 style="margin-bottom: 10px;">Captcha 1 (Step 1)</h3>
-                    <ul style="line-height: 1.8;">
-                        <li>✅ Ay seçimi (dropdown)</li>
-                        <li>✅ İl yazma (4 rəqəm)</li>
-                        <li>✅ Gün sabit (31)</li>
-                        <li>✅ Strukturlaşdırılmış</li>
-                        <li>📝 Format: 31MMYYYY</li>
-                    </ul>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-                    <h3 style="margin-bottom: 10px;">Captcha 2 (Step 2)</h3>
-                    <ul style="line-height: 1.8;">
-                        <li>🔢 Sərbəst 8 rəqəm</li>
-                        <li>🎲 Təsadüfi klaviatura</li>
-                        <li>✏️ Manuel yazma</li>
-                        <li>⚡ Sadə və sürətli</li>
-                        <li>📝 Format: DDMMYYYY</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script>

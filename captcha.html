@@ -446,11 +446,19 @@
                     const months = ["Yan.", "Fev.", "Mar.", "Apr.", "May", "İyun",
                         "İyul", "Avq.", "Sen.", "Okt.", "Noy.", "Dek."
                     ];
+                    
+                    // Shuffle the months array
+                    const shuffledMonths = [...months];
+                    for (let i = shuffledMonths.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [shuffledMonths[i], shuffledMonths[j]] = [shuffledMonths[j], shuffledMonths[i]];
+                    }
+                    
                     const keyboardArray = [];
                     const chunkSize = 4;
 
-                    for (let i = 0; i < months.length; i += chunkSize) {
-                        keyboardArray.push(months.slice(i, i + chunkSize));
+                    for (let i = 0; i < shuffledMonths.length; i += chunkSize) {
+                        keyboardArray.push(shuffledMonths.slice(i, i + chunkSize));
                     }
 
                     return keyboardArray;
